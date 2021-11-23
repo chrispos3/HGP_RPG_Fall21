@@ -22,7 +22,7 @@ public class GameRunner {
             System.out.println("3. Shop");
             System.out.println("4. Final Boss Battle");
             System.out.println("5. Quit game");
-            System.out.println("DAN WUZ HERE");
+
 
             int userInput = scan.nextInt();
 
