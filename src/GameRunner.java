@@ -24,6 +24,7 @@ public class GameRunner {
             System.out.println("4. Final Boss Battle");
             System.out.println("5. Quit game");
 
+
             int userInput = scan.nextInt();
 
             switch(userInput) {
