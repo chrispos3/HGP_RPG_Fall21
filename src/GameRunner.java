@@ -13,6 +13,7 @@ public class GameRunner {
 
 
         System.out.println("Welcome to the HPG RPG!");
+        System.out.println("Now IVO is establishing his presence.");
 
         //main menu loop
         while (gameOn) {
