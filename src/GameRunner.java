@@ -47,6 +47,7 @@ public class GameRunner {
                     break;
                 case 3:
                     //shop
+                    //s.enterShop(h, e1);
                     break;
                 case 4:
                     //final boss
