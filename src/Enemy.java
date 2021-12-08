@@ -52,12 +52,14 @@ public class Enemy {
         if (rand <= 8) {
             int tempH = h.getHealth() - attackPower;
             h.setHealth(tempH);
+            System.out.println("THE ENEMY ATTACKED DOING " + attackPower + " DAMAGE!");
             System.out.println("HERO HAS " + h.getHealth() + " HEALTH!");
         } else if (rand == 9) {
             //critical
             int tempH = h.getHealth() - attackPower * 5;
             h.setHealth(tempH);
             System.out.println("THE ENEMY GOT A CRITICAL STRIKE!!!");
+            System.out.println("THE ENEMY DID " + (attackPower * 5) + " DAMAGE");
             System.out.println("HERO HAS " + h.getHealth() + " HEALTH!");
         } else if (rand == 10) {
             //miss
