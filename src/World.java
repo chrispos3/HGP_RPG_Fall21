@@ -101,9 +101,8 @@ public class World {
 
         } else if (random == 4) {
             //treasure found
-
             System.out.println("HERO FOUND A TREASURE");
-
+            h.giveCoins(h);
 
         }
 

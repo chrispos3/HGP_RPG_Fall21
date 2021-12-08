@@ -9,6 +9,7 @@ public class Hero {
     private int attackPower;
     private String name;
     private String[] inventory = new String[5];
+    private int coins;
 
     //constructor
 
@@ -17,6 +18,7 @@ public class Hero {
         this.attackPower = 10;
         this.name = "Batman";
         this.inventory[0] = "Potion";
+        this.coins = 0;
     }
 
 
@@ -54,6 +56,10 @@ public class Hero {
         this.inventory = inventory;
     }
 
+    public int getCoins() {return coins;}
+
+    public void setCoins(int coins) {this.coins = coins;}
+
     @Override
     public String toString() {
         return "Hero{" +
@@ -61,10 +67,11 @@ public class Hero {
                 ", attackPower=" + attackPower +
                 ", name='" + name + '\'' +
                 ", inventory=" + Arrays.toString(inventory) +
+                ", coins=" + coins +
                 '}';
     }
 
-    //helper method
+//helper method
 
     void attack(Enemy e) { //e BECOMES e1, or e2, or e3, ect
         Random r = new Random();
@@ -87,5 +94,13 @@ public class Hero {
         int eHealth = e.getHealth() - getAttackPower() * 5;
         e.setHealth(eHealth);
         }
+
+    void giveCoins(Hero h) {
+        Random r = new Random();
+        int rand = r.nextInt(100) + 1;
+        setCoins(rand);
+        System.out.println("HERO FOUND " + getCoins() + " COINS!");
+    }
+
     }
 
