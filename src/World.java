@@ -39,36 +39,41 @@ public class World {
                 userInput = bScan.nextInt();
 
                 switch(userInput) {
-                    case 1:
-                        System.out.println("Regular attack (1), Magic attack (2), or Power attack (3)");
-                        attackInput = bScan.nextInt();
+                        case 1:
+                         //   for (e1.getHealth() < 0; || h.getHealth() < 0) {
+                            System.out.println("Regular attack (1), Magic attack (2), or Power attack (3)");
+                            attackInput = bScan.nextInt();
 
-                        switch(attackInput) {
-                            case 1:
-                                System.out.println("You attacked the enemy.");
-                                h.attack(e1);
+                            switch (attackInput) {
+                                case 1:
+                                    System.out.println("You attacked the enemy.");
+                                    h.attack(e1);
 
-                            case 2:
-                                System.out.println("You used magic on the enemy!");
+                                case 2:
+                                    System.out.println("You used magic on the enemy!");
 
-                            case 3:
-                                System.out.println("You used a power attack on the enemy!");
-                                int r1 = r.nextInt(10) + 1;
-                                if (r1 >= 3) {
-                                    System.out.println("ATTACK CONNECTS!");
-                                    h.powerAttack(e1);
+                                case 3:
+                                    System.out.println("You used a power attack on the enemy!");
+                                    int r1 = r.nextInt(10) + 1;
+                                    if (r1 >= 3) {
+                                        System.out.println("ATTACK CONNECTS!");
+                                        h.powerAttack(e1);
 
-                                } else if (r1 <= 4) {
-                                    System.out.println("ATTACK MISSES!");
-                                }
-                            default:
-                                break;
-                        }
+                                    } else if (r1 <= 4) {
+                                        System.out.println("ATTACK MISSES!");
+                                    }
+                                default:
+                                    break;
+                            }
 
-                        h.attack(e1);
+                            e1.attack(h);
+                            System.out.println("THE ENEMY HAS " + e1.getHealth() + " HEALTH REMAINING!");
+                  //  }
                         break;
                     case 2:
-
+                        h.heal(h);
+                        e1.attack(h);
+                        System.out.println("THE ENEMY HAS " + e1.getHealth() + " HEALTH REMAINING!");
                         break;
                     case 3:
                         System.out.println("Which item would you like to use?");
@@ -82,6 +87,8 @@ public class World {
                         if (random2 == 1 || random2 == 2) {
                             //nothing happens
                             System.out.println("Running was unsuccessful!");
+                            e1.attack(h);
+                            System.out.println("THE ENEMY HAS " + e1.getHealth() + " HEALTH REMAINING!");
                             break;
                         } else if (random2 == 3) {
                             //hero escapes
@@ -95,7 +102,6 @@ public class World {
                         break;
 
                 }
-                e1.attack(h);
 
             }
 

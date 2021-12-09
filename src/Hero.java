@@ -98,9 +98,31 @@ public class Hero {
     void giveCoins(Hero h) {
         Random r = new Random();
         int rand = r.nextInt(100) + 1;
-        setCoins(rand);
-        System.out.println("HERO FOUND " + getCoins() + " COINS!");
+        System.out.println("HERO FOUND " + rand + " COINS!");
+        int tempC = rand + getCoins();
+        setCoins(tempC);
     }
+
+    void increaseStats(Hero h) {
+        System.out.println("HERO health has increased by 10!");
+        System.out.println("HERO attack power has increased by 5!");
+        int tempH = getHealth() + 10;
+        setHealth(tempH);
+
+        int tempAP = getAttackPower() + 5;
+        setAttackPower(tempAP);
+    }
+
+    void heal(Hero h) {
+        Random r = new Random();
+        int randomHeal = r.nextInt(100) + 1;
+        System.out.println("HERO HEALED FOR " + randomHeal + " HEALTH!");
+        int tempH = randomHeal + getHealth();
+        setHealth(tempH);
+        System.out.println("HERO HAS " + getHealth() + " HEALTH REMAINING");
+
+    }
+
 
     }
 

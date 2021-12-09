@@ -51,6 +51,8 @@ public class GameRunner {
                     break;
                 case 4:
                     //final boss
+                    System.out.println("OH NO, ITS THE IMPOSTER(tm) FROM THE HIT GAME AMONG US!");
+
                     break;
                 case 5:
                     //end game
