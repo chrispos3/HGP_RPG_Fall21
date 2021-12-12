@@ -10,10 +10,7 @@ public class GameRunner {
         boolean gameOn = true;
 
 
-
-
         System.out.println("Welcome to the HPG RPG!");
-        System.out.println("Now IVO is establishing his presence.");
 
         //main menu loop
         while (gameOn) {
@@ -26,46 +23,45 @@ public class GameRunner {
 
 
             int userInput = scan.nextInt();
+                switch (userInput) {
+                    case 1:
+                        //roam
+                        //10% change treasure; 10% chance nothing; 10% stronger enemy; 70% normal enemy
+                        //player chooses attack option first
+                        //attack; flee; heal;
+                        //enemy attacks
+                        //Continue looping until enemy OR player is dead
+                        //if hero is dead = game over; if enemy is dead = loot item, updates stats, shows stats
+                        w.roamTheWorld(h, e1);
+                        break;
+                    case 2:
+                        //check stats
+                        System.out.println("");
+                        System.out.println("Stats:");
+                        System.out.println(h.toString());
+                        System.out.println(" ");
+                        break;
+                    case 3:
+                        //shop
+                        //s.enterShop(h, e1);
+                        break;
+                    case 4:
+                        //final boss
+                        System.out.println("OH NO, ITS THE IMPOSTER(tm) FROM THE HIT GAME AMONG US!");
 
-            switch(userInput) {
-                case 1:
-                    //roam
-                    //10% change treasure; 10% chance nothing; 10% stronger enemy; 70% normal enemy
-                    //player chooses attack option first
-                    //attack; flee; heal;
-                    //enemy attacks
-                    //Continue looping until enemy OR player is dead
-                    //if player is dead = game over; if enemy is dead = loot item, updates stats, shows stats
-                    w.roamTheWorld(h, e1);
-                    break;
-                case 2:
-                    //check stats
-                    System.out.println("");
-                    System.out.println("Stats:");
-                    System.out.println(h.toString());
-                    System.out.println(" ");
-                    break;
-                case 3:
-                    //shop
-                    //s.enterShop(h, e1);
-                    break;
-                case 4:
-                    //final boss
-                    System.out.println("OH NO, ITS THE IMPOSTER(tm) FROM THE HIT GAME AMONG US!");
+                        break;
+                    case 5:
+                        //end game
+                        gameOn = false;
+                        System.out.println("Thanks for playing!");
+                        break;
+                    default:
+                        System.out.println("INVALID INPUT. TRY AGAIN.");
+                        break;
+                }
 
-                    break;
-                case 5:
-                    //end game
-                    gameOn = false;
-                    System.out.println("Thanks for playing!");
-                    break;
-                default:
-                    System.out.println("INVALID INPUT. TRY AGAIN.");
-                    break;
+
             }
-
-
-        }
 
 
 //        while (true) {
@@ -83,5 +79,6 @@ public class GameRunner {
 //
 //      }
 
+        }
     }
-}
+
