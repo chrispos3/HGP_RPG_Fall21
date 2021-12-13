@@ -18,7 +18,8 @@ public class Hero {
         this.attackPower = 10;
         this.name = "Batman";
         this.inventory[0] = "Potion";
-        this.coins = 0;
+        this.coins = 100;
+
     }
 
 
@@ -50,6 +51,10 @@ public class Hero {
 
     public String[] getInventory() {
         return inventory;
+    }
+
+    public void setInvItem(String item, int i) {
+        this.inventory[i] = item;
     }
 
     public void setInventory(String[] inventory) {

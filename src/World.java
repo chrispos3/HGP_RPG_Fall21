@@ -41,7 +41,7 @@ public class World {
 
                     switch (userInput) {
                         case 1:
-                            //   for (e1.getHealth() < 0; || h.getHealth() < 0) {
+
                             System.out.println("Regular attack (1), Magic attack (2), or Power attack (3)");
                             attackInput = bScan.nextInt();
                             switch (attackInput) {
@@ -103,6 +103,11 @@ public class World {
                             System.out.println("ERROR; DIFFERENT OPTION");
                             break;
 
+                    }
+
+                    if (e1.getHealth() < 0 || h.getHealth() < 0) {
+                        battleOn = false;
+                        System.out.println("The battle ended!");
                     }
 
 
