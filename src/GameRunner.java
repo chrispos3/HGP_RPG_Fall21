@@ -6,6 +6,7 @@ public class GameRunner {
         Hero h = new Hero();
         Enemy e1 = new Enemy();
         World w = new World();
+        Shop s = new Shop();
         Scanner scan = new Scanner(System.in);
         boolean gameOn = true;
 
@@ -43,7 +44,7 @@ public class GameRunner {
                         break;
                     case 3:
                         //shop
-                        //s.enterShop(h, e1);
+                        s.enterShop(h, e1);
                         break;
                     case 4:
                         //final boss
