@@ -81,13 +81,13 @@ public class Shop {
                 String itemChosen = new String();
 
                 if (itemIntChoose == 1) {
-                    itemChosen.equals(item1);
+                    itemChosen = item1;
 
                 } else if (itemIntChoose == 2) {
-                    itemChosen.equals(item2);
+                    itemChosen = item2;
 
                 } else if (itemIntChoose == 3) {
-                    itemChosen.equals(item3);
+                    itemChosen = item3;
 
                 } else {
                     return;
