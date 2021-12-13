@@ -33,6 +33,7 @@ public class GameRunner {
                         //enemy attacks
                         //Continue looping until enemy OR player is dead
                         //if hero is dead = game over; if enemy is dead = loot item, updates stats, shows stats
+
                         w.roamTheWorld(h, e1);
                         break;
                     case 2:
