@@ -78,9 +78,29 @@ public class World {
                             System.out.println("THE ENEMY HAS " + e1.getHealth() + " HEALTH REMAINING!");
                             break;
                         case 3:
-                            System.out.println("Which item would you like to use?");
+                            System.out.println("Which item would you like to use? (please type in the name of the item)");
                             System.out.println(Arrays.toString(h.getInventory()));
                             itemUse = bScan.next();
+                            if (itemUse.equals("birthday cake")) {
+                                System.out.println("Yum!");
+                            } else if (itemUse.equals("apple")) {
+                                System.out.println("An apple a day keeps your enemies away!");
+                                System.out.println("That's how the saying goes, right?");
+                            } else if (itemUse.equals("healing potion")) {
+                                System.out.println("You won't regret this.");
+                            } else if (itemUse.equals("magic sword")) {
+                                System.out.println("This will prove to be helpful!");
+                            } else if (itemUse.equals("attack potion")) {
+                                System.out.println("This will prove to be helpful!");
+                            } else if (itemUse.equals("crossbow")) {
+                                System.out.println("Your enemies are no match for this!");
+                            } else if (itemUse.equals("shield")) {
+                                System.out.println("This will certainly reduce your damage taken!");
+                            } else if (itemUse.equals("protective boots")) {
+                                System.out.println("Every bit of armor counts!");
+                            } else {
+                                System.out.println("Every bit of armor counts!");
+                            }
 
                             break;
                         case 4:

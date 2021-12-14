@@ -14,6 +14,7 @@ public class Shop {
         String item2 = "";
         String item3 = "";
         int coinsLost;
+
         Scanner scan = new Scanner(System.in);
         int userInput;
 
