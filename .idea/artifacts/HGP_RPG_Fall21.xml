@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HGP_RPG_Fall21">
+    <output-path>$PROJECT_DIR$/out/artifacts/HGP_RPG_Fall21</output-path>
+    <root id="archive" name="HGP_RPG_Fall21.jar" />
+  </artifact>
+</component>
